@@ -1,5 +1,4 @@
 import os
-import socket
 from pathlib import Path
 
 from .base import *  # noqa
@@ -23,5 +22,4 @@ ADMIN_URL = "admin/"
 
 STATIC_URL = "static/"
 
-hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
-INTERNAL_IPS = [ip[:-1] + "1" for ip in ips] + ["127.0.0.1", "172.18.0.3"]
+INTERNAL_IPS = ["127.0.0.1", "172.18.0.3"]
